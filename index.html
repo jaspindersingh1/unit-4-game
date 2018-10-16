@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Crystal Math</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Reset CSS -->
+        <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+        <!-- My CSS -->
+        <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    </head>
+    <body>
+
+        <div class="header">
+            <h1>Crystal Math</h1>
+        </div>
+
+        <div class="container">
+            
+            <div class="gameInstruction">
+                <p>You will be given a random number at the start of the game.</p><br>
+                <p>There are four Crystals provided below.</p><br>
+                <p>Your task is to click on each crystal until your score adds up to the random number.</p><br>
+                <p>The value of the crystal is hidden until you click on it.</p><br>
+            </div>
+
+            <div class="progress">
+                <p>Wins: <span id="wins"></span></p><br>
+                <p>Losses: <span id="losses"></span></p><br>
+            </div>
+
+            <div class="numberSlot">
+                <span>Guess Number:</span><br>
+                <span id="computerNumber"></span><br>
+            </div>
+
+            <div class="numberSlot">
+                <span>Your Number:</span><br>
+                <span id="yourNumber"></span><br>
+            </div>
+
+            <div id="crystals">
+                <img class="crystalSize" id="redGem" src="assets/images/redGem.png" alt="redGem">
+                <img class="crystalSize" id="blueGem" src="assets/images/blueGem.png" alt="redGem">
+                <img class="crystalSize" id="greenGem" src="assets/images/greenGem.png" alt="redGem">
+                <img class="crystalSize" id="orangeGem" src="assets/images/orangeGem.png" alt="redGem">
+            </div>
+
+        </div>
+
+        <div class="footer">
+            Copyright &copy;
+        </div>
+        <script src="assets/javascript/game.js"></script>
+    </body>
+</html>

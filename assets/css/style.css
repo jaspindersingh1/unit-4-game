@@ -1,0 +1,80 @@
+/* page styling */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'VT323', monospace;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: #F08080;
+    font-family: 'VT323', monospace;
+    letter-spacing: 7px;
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.container {
+    background-image: url("../images/background.jpg");
+    height: 100vh;
+    
+}
+
+.gameInstruction {
+    width: 310px;
+    display: inline-block;
+    height: 190px;
+    float: left;
+    margin: 20px;
+    padding: 10px;
+    background-color: #D5F5E3;
+    font-size: 16px;
+
+}
+
+.progress {
+    width: 130px;
+    float: left;
+    display: inline-block;
+    height: 65px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #EBDEF0;
+    font-size: 16px;
+}
+
+.numberSlot {
+    width: 130px;
+    float: left;
+    display: inline-block;
+    height: 65px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #EBDEF0;
+    font-size: 16px;
+}
+
+#computerNumber,
+#yourNumber {
+    font-size: 40px;
+    padding: 37%;
+}
+
+.crystalSize {
+    width: 100px;
+    height: 100px;
+}
+
+.footer {
+    width: 100%;
+    height: 25px;
+    background-color: #F08080;
+    font-family: 'VT323', monospace;
+    letter-spacing: 7px;
+    font-size: 12px;
+    color: #ffffff;
+    text-align: center;
+}
