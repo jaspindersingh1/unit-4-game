@@ -11,9 +11,11 @@
         <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
         <!-- My CSS -->
         <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+        <!-- Added link to the jQuery Library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
-
+        <!-- Individually designed each portion of the page -->
         <div class="header">
             <h1>Crystal Math</h1>
         </div>
@@ -22,8 +24,8 @@
             
             <div class="gameInstruction">
                 <p>You will be given a random number at the start of the game.</p><br>
-                <p>There are four Crystals provided below.</p><br>
-                <p>Your task is to click on each crystal until your score adds up to the random number.</p><br>
+                <p>There are four Crystals provided.</p><br>
+                <p>Your task is to click on each crystal until your score adds up to the computer number.</p><br>
                 <p>The value of the crystal is hidden until you click on it.</p><br>
             </div>
 
@@ -33,7 +35,7 @@
             </div>
 
             <div class="numberSlot">
-                <span>Guess Number:</span><br>
+                <span>Computer Number:</span><br>
                 <span id="computerNumber"></span><br>
             </div>
 
@@ -54,6 +56,8 @@
         <div class="footer">
             Copyright &copy;
         </div>
+
+        <!-- JavaScript -->
         <script src="assets/javascript/game.js"></script>
     </body>
 </html>
