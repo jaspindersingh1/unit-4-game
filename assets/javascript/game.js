@@ -47,49 +47,39 @@ orangeNumber = numForCrystals[3];
 
 
 
-$("#redGem").attr("data-redNumber", numForCrystals[0]);
-$("#blueGem").attr("data-blueNumber", numForCrystals[1]);
-$("#greenGem").attr("data-greenNumber", numForCrystals[2]);
-$("#orangeGem").attr("data-orangeNumber", numForCrystals[3]);
+$("#redGem").attr("data", redNumber);
+console.log(redNumber)
+$("#blueGem").attr("data", blueNumber);
+console.log(blueNumber)
+$("#greenGem").attr("data", greenNumber);
+console.log(greenNumber)
+$("#orangeGem").attr("data", orangeNumber);
+console.log(orangeNumber)
 
 $(".crystalSize").on("click", function() {
 
     // getting crystalValue
-    var crystalValue = ($(numForCrystals).attr("data-crystalvalue"));
+    var crystalValue = ($(this).attr("data"));
     crystalValue = parseInt(crystalValue);
     
     // each time the user clicks the crystal the counter goes up by the increment variable the computer selected radomly.
     yourCounter += crystalValue;
 
-    // output the number of times the crystal is clicked.
-    alert("Your new score is: " + yourCounter);
+    // output the number of times the crystal is clicked on the DOM
+    // alert("Your new score is: " + yourCounter);
+    $("#yourNumber").text(yourCounter);
 
-    // now check if the clicked number matches the targetNumber
-    if (yourCounter === targetNumber) {
-        alert("you win!");
-    }
-
-    // now add the else if part so if they go above the number the user loses
-    else if (yourCounter >= targetNumber) {
-        alert("you lose!")
-    }
-});
-
-// keep track of how many games has been won and lost
-
-function winLoss () {
-    console.log("Wins: " + winCounter + " | Losses: " + lossCounter);
-
-    // display the win results to the html
+    // now check if the clicked number matches the targetNumber and the player wins and the DOM is updated.
     if (yourCounter === targetNumber) {
         winCounter++;
-        // alert("you win!");
+        alert("you win!");
         $("#wins").text(winCounter);
-
-    } else if (yourCounter > targetNumber) {
-        lossCounter++;
-        // alert("You lose!");
-        $("#losses").text(lossCounter);
-
     }
-}
+
+    // now add the else if part so if they go above the number the user loses and updates the DOM 
+    else if (yourCounter > targetNumber) {
+        lossCounter++;
+        alert("You lose!");
+        $("#losses").text(lossCounter);
+    }
+});
