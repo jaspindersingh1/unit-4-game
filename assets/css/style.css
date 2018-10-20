@@ -57,6 +57,33 @@ body {
     font-size: 16px;
 }
 
+/* .resetDiv {
+    width: 130px;
+    display: inline-block;
+    height: 65px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #EBDEF0;
+    font-size: 16px;
+} */
+
+.resetButton {
+    background-color: #EBDEF0;
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    padding: 34px;
+}
+
+.resetButton:hover {
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 #computerNumber,
 #yourNumber {
     font-size: 40px;

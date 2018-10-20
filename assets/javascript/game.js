@@ -5,12 +5,8 @@
 // source for unique random: https://stackoverflow.com/questions/2380019/generate-unique-random-numbers-between-1-and-100
 
 // Number guessed by random and display on the browser
-var targetNumber = "";
-for (var j = 0; j < 1; j++) {
-    targetNumber = Math.floor(Math.random() * 102) + 19;
-    // console.log(targetNumber);
-}
-$("#computerNumber").text(targetNumber);
+var targetNumber;
+
 
 // create a counter for user's total
 var yourCounter = 0;
@@ -48,13 +44,14 @@ orangeNumber = numForCrystals[3];
 
 
 $("#redGem").attr("data", redNumber);
-console.log(redNumber)
+// console.log(redNumber)
 $("#blueGem").attr("data", blueNumber);
-console.log(blueNumber)
+// console.log(blueNumber)
 $("#greenGem").attr("data", greenNumber);
-console.log(greenNumber)
+// console.log(greenNumber)
 $("#orangeGem").attr("data", orangeNumber);
-console.log(orangeNumber)
+// console.log(orangeNumber)
+
 
 $(".crystalSize").on("click", function() {
 
@@ -72,14 +69,26 @@ $(".crystalSize").on("click", function() {
     // now check if the clicked number matches the targetNumber and the player wins and the DOM is updated.
     if (yourCounter === targetNumber) {
         winCounter++;
-        alert("you win!");
+        alert("Winner!");
         $("#wins").text(winCounter);
+        resetGame()
     }
 
     // now add the else if part so if they go above the number the user loses and updates the DOM 
     else if (yourCounter > targetNumber) {
         lossCounter++;
-        alert("You lose!");
+        alert("You Lose!");
         $("#losses").text(lossCounter);
+        resetGame()
     }
 });
+
+function resetGame() {
+    for (var j = 0; j < 1; j++) {
+        targetNumber = Math.floor(Math.random() * 102) + 19;
+        // console.log(targetNumber);
+    }
+    $("#computerNumber").text(targetNumber);
+} 
+
+resetGame()
